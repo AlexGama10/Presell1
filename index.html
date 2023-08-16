@@ -1,4 +1,16 @@
 <!DOCTYPE html><html lang="pt-BR"><head>
+	<script>
+  var url_redirect = 'https://www.google.com.br'
+  var url_atual = window.location.href;
+  var url = new URL(url_atual);
+  var parametro = url.searchParams.get("nomeparametro");
+  if (parametro === "conteudoparametro"){
+    document.querySelector("body").style.display = "block"
+  }else{
+    document.querySelector("body").remove();
+    window.location.href = url_redirect;
+  } 
+</script>
 	<meta charset="UTF-8">
 			<title>Pressel Onlyfree – Verifique Hoje</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
